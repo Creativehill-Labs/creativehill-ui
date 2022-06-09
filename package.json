@@ -1,0 +1,10 @@
+{
+  "name": "creativehill-ui",
+  "version": "1.0.0",
+  "description": "CreativeHill UI Kit",
+  "main": "index.js",
+  "repository": "https://github.com/Creativehill-Labs/creativehill-ui.git",
+  "author": "Darron Park <darron1217@gmail.com>",
+  "license": "MIT",
+  "private": true
+}
