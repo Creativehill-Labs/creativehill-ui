@@ -1,6 +1,5 @@
-import React from "react";
-import { FC } from "react";
+import styled from "styled-components";
 
-const Button: FC = (props) => <button {...props} />;
+const Button = styled.button``;
 
 export default Button;
