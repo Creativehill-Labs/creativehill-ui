@@ -1,20 +1,22 @@
 {
-  "name": "creativehill-ui",
+  "name": "@creativehill-labs/creativehill-ui",
   "version": "1.0.0",
   "description": "CreativeHill UI Kit",
   "repository": "https://github.com/Creativehill-Labs/creativehill-ui.git",
   "author": "Darron Park <darron1217@gmail.com>",
   "license": "MIT",
-  "private": true,
   "scripts": {
     "build": "rollup -c"
   },
   "devDependencies": {
+    "@creativehill-labs/eslint-config-creativehill": "^0.1.1",
     "@rollup/plugin-commonjs": "^22.0.0",
     "@rollup/plugin-node-resolve": "^13.3.0",
     "@rollup/plugin-typescript": "^8.3.2",
     "@types/react": "^18.0.12",
     "@types/styled-components": "^5.1.25",
+    "eslint": "^7.32.0",
+    "prettier": "^2.6.2",
     "rollup": "^2.75.6",
     "rollup-plugin-dts": "^4.2.2",
     "rollup-plugin-peer-deps-external": "^2.2.4",
