@@ -19,4 +19,4 @@ jobs:
           NODE_AUTH_TOKEN: ${{ secrets.YARN_TOKEN }}
       - run: yarn deploy-storybook --ci
         env:
-          GH_TOKEN: Creativehill-Labs:${{ secrets.GITHUB_TOKEN }}
+          GH_TOKEN: ${{ github.actor }}:${{ secrets.GITHUB_TOKEN }}
