@@ -8,7 +8,7 @@ import Plugin from './assets/plugin.svg';
 import Repo from './assets/repo.svg';
 import StackAlt from './assets/stackalt.svg';
 
-<Meta title="Example/Introduction" />
+<Meta title="Introduction" />
 
 <style>
   {`
@@ -81,131 +81,48 @@ import StackAlt from './assets/stackalt.svg';
       margin-right: 15px;
       flex: none;
     }
-
-    .link-item span {
-      font-size: 14px;
-      line-height: 20px;
-    }
-
-    .tip {
-      display: inline-block;
-      border-radius: 1em;
-      font-size: 11px;
-      line-height: 12px;
-      font-weight: 700;
-      background: #E7FDD8;
-      color: #66BF3C;
-      padding: 4px 12px;
-      margin-right: 10px;
-      vertical-align: top;
-    }
-
-    .tip-wrapper {
-      font-size: 13px;
-      line-height: 20px;
-      margin-top: 40px;
-      margin-bottom: 40px;
-    }
-
-    .tip-wrapper code {
-      font-size: 12px;
-      display: inline-block;
-    }
   `}
 </style>
 
-# Welcome to Storybook
+# 🎨 Creativehill UI (CUI)
 
-Storybook helps you build UI components in isolation from your app's business logic, data, and context.
-That makes it easy to develop hard-to-reach states. Save these UI states as **stories** to revisit during development, testing, or QA.
+Creativehill UI는 Creativehill Design System(CDS)에 기반하여 만들어진 React Component Library입니다.
 
-Browse example stories now by navigating to them in the sidebar.
-View their code in the `stories` directory to learn how they work.
-We recommend building UIs with a [**component-driven**](https://componentdriven.org) process starting with atomic components and ending with pages.
+더 나은 UX(User Experience)와 DX(Developer Experience)를 위한 메이커들의 노력으로 탄생🐣했습니다.
 
-<div className="subheading">Configure</div>
+Creativehill의 프로덕트는 [**component-driven**](https://componentdriven.org) 방식으로 설계하는 것을 권장하며, 원자(atomic) 단위로 시작하여 페이지(page) 단위로 끝나는 개발 프로세스를 지향합니다.
 
-<div className="link-list">
-  <a
-    className="link-item"
-    href="https://storybook.js.org/docs/react/addons/addon-types"
-    target="_blank"
-  >
-    <img src={Plugin} alt="plugin" />
-    <span>
-      <strong>Presets for popular tools</strong>
-      Easy setup for TypeScript, SCSS and more.
-    </span>
-  </a>
-  <a
-    className="link-item"
-    href="https://storybook.js.org/docs/react/configure/webpack"
-    target="_blank"
-  >
-    <img src={StackAlt} alt="Build" />
-    <span>
-      <strong>Build configuration</strong>
-      How to customize webpack and Babel
-    </span>
-  </a>
-  <a
-    className="link-item"
-    href="https://storybook.js.org/docs/react/configure/styling-and-css"
-    target="_blank"
-  >
-    <img src={Colors} alt="colors" />
-    <span>
-      <strong>Styling</strong>
-      How to load and configure CSS libraries
-    </span>
-  </a>
-  <a
-    className="link-item"
-    href="https://storybook.js.org/docs/react/get-started/setup#configure-storybook-for-your-stack"
-    target="_blank"
-  >
-    <img src={Flow} alt="flow" />
-    <span>
-      <strong>Data</strong>
-      Providers and mocking for data libraries
-    </span>
-  </a>
-</div>
+## 사용법
 
-<div className="subheading">Learn</div>
+좌측의 사이드바를 통해 컴포넌트 목록에 접근할 수 있으며, `스토리`를 통해 각 컴포넌트의 코드와 작동예제를 확인할 수 있습니다.
 
 <div className="link-list">
-  <a className="link-item" href="https://storybook.js.org/docs" target="_blank">
-    <img src={Repo} alt="repo" />
-    <span>
-      <strong>Storybook documentation</strong>
-      Configure, customize, and extend
-    </span>
-  </a>
   <a className="link-item" href="https://storybook.js.org/tutorials/" target="_blank">
     <img src={Direction} alt="direction" />
     <span>
-      <strong>In-depth guides</strong>
-      Best practices from leading teams
+      <strong>튜토리얼</strong>
+      CUI를 활용하여 개발 시작하기
     </span>
   </a>
-  <a className="link-item" href="https://github.com/storybookjs/storybook" target="_blank">
+  <a className="link-item" href="https://storybook.js.org/docs" target="_blank">
+    <img src={Repo} alt="repo" />
+    <span>
+      <strong>CDS 가이드</strong>
+      CUI의 기반이 되는 Design System 이해하기
+    </span>
+  </a>
+  <a className="link-item" href="https://github.com/Creativehill-Labs/creativehill-ui" target="_blank">
     <img src={Code} alt="code" />
     <span>
-      <strong>GitHub project</strong>
-      View the source and add issues
+      <strong>GitHub 링크</strong>
+      소스코드 및 이슈를 확인하세요
     </span>
   </a>
-  <a className="link-item" href="https://discord.gg/storybook" target="_blank">
+  <a className="link-item" href="https://creativehillnew.slack.com/archives/C03J6EXEZ2L" target="_blank">
     <img src={Comments} alt="comments" />
     <span>
-      <strong>Discord chat</strong>
-      Chat with maintainers and the community
+      <strong>슬랙 채널</strong>
+      CDS를 만들고 유지하는 커뮤니티에 참여하세요
     </span>
   </a>
-</div>
-
-<div className="tip-wrapper">
-  <span className="tip">Tip</span>Edit the Markdown in{' '}
-  <code>stories/Introduction.stories.mdx</code>
 </div>
