@@ -14,8 +14,9 @@ jobs:
         with:
           node-version: 16
           registry-url: https://npm.pkg.github.com
-      - run: yarn install --frozen-lockfile
-      - run: yarn deploy-storybook --ci
+        run: |
+          yarn install --frozen-lockfile
+          yarn deploy-storybook --ci
         env:
           NODE_AUTH_TOKEN: ${{ secrets.YARN_TOKEN }}
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
