@@ -8,9 +8,6 @@ on:
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
-    permissions:
-      contents: read
-      packages: read
     steps:
       - uses: actions/checkout@v3
       - uses: actions/setup-node@v3
@@ -18,7 +15,7 @@ jobs:
           node-version: 16
           registry-url: https://npm.pkg.github.com
       - run: yarn install --frozen-lockfile
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
       - run: yarn build-storybook
       - run: yarn deploy-storybook
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.YARN_TOKEN }}
