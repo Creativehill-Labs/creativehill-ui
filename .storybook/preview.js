@@ -1,6 +1,4 @@
-import { addDecorator } from "@storybook/react";
-import { withThemesProvider } from "storybook-addon-styled-component-theme";
-import { ThemeProvider } from "styled-components";
+import { withThemesProvider } from 'themeprovider-storybook';
 import createCuiTheme from '../src/utils/createCuiTheme';
 import ResetCSS from '../src/utils/ResetCSS';
 
@@ -14,9 +12,22 @@ export const parameters = {
   },
 }
 
-// Theme
-addDecorator((Story) => <>
-  <ResetCSS />
-  <Story />
-</>)
-addDecorator(withThemesProvider([createCuiTheme({})]), ThemeProvider);
+const globalDecorator = (StoryFn) => (
+  <>
+    <ResetCSS />
+    <StoryFn />
+  </>
+);
+
+const themes = [
+  {
+    name: "Light",
+    ...createCuiTheme({})
+  },
+  {
+    name: "Dark",
+    ...createCuiTheme({})
+  },
+];
+
+export const decorators = [globalDecorator, withThemesProvider(themes)];

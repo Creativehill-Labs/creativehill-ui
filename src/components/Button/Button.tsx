@@ -18,6 +18,7 @@ export interface ButtonProps {
 const Button = styled.button<ButtonProps>`
   border-radius: 5px;
   transition: opacity 0.1s linear;
+  cursor: pointer;
 
   :hover {
     opacity: 0.5;
@@ -25,6 +26,7 @@ const Button = styled.button<ButtonProps>`
 
   :disabled {
     opacity: 0.5;
+    cursor: default;
   }
   ${({ size }) => size && sizeVariants[size]}
   ${({ fill }) => fill && fillVariants[fill]}

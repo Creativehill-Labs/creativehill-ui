@@ -14,5 +14,6 @@ module.exports = {
       'error',
       { devDependencies: ['**/*.stories.tsx'] },
     ],
+    'guard-for-in': 'off',
   },
 };
