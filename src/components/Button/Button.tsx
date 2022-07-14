@@ -11,14 +11,16 @@ import {
 
 export interface ButtonProps {
   fill?: ButtonFill;
-  color: ButtonColor;
+  color?: ButtonColor;
   size?: ButtonSize;
+  width?: string;
 }
 
 const Button = styled.button<ButtonProps>`
   border-radius: 5px;
   transition: opacity 0.1s linear;
   cursor: pointer;
+  font-weight: 500;
 
   :hover {
     opacity: 0.5;
@@ -30,12 +32,14 @@ const Button = styled.button<ButtonProps>`
   }
   ${({ size }) => size && sizeVariants[size]}
   ${({ fill }) => fill && fillVariants[fill]}
+  width: ${({ width }) => width};
 `;
 
 Button.defaultProps = {
   color: buttonColors.PRIMARY,
   fill: buttonFills.SOLID,
   size: buttonSizes.MD,
+  type: `button`,
 };
 
 export default Button;

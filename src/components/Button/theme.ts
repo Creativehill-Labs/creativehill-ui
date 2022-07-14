@@ -4,12 +4,14 @@ import { buttonFills, buttonSizes } from './types';
 
 export const sizeVariants = {
   [buttonSizes.SM]: {
-    fontSize: `12px`,
-    padding: `4px 8px`,
+    fontSize: `14px`,
+    lineHeight: `24px`,
+    padding: `7px 18px`,
   },
   [buttonSizes.MD]: {
     fontSize: `16px`,
-    padding: `8px 16px`,
+    lineHeight: `26px`,
+    padding: `11px 20px`,
   },
   [buttonSizes.LG]: {
     fontSize: `22px`,

@@ -36,6 +36,8 @@ export interface PaletteConfig {
     danger: PaletteSemanticColor;
     warning: PaletteSemanticColor;
     info: PaletteSemanticColor;
+    dark1: PaletteSemanticColor;
+    light2: PaletteSemanticColor;
   };
 }
 
@@ -46,12 +48,14 @@ interface TypographyConfig {
   h4: CSSObject;
   h5: CSSObject;
   h6: CSSObject;
+  subtitle: CSSObject;
   p1: CSSObject;
   p2: CSSObject;
   caption: CSSObject;
 }
 
 export interface CuiTheme {
+  space: number[];
   breakpoints: BreakpointConfig;
   palette: PaletteConfig;
   typography: TypographyConfig;
@@ -59,6 +63,7 @@ export interface CuiTheme {
 }
 
 const createCuiTheme = (overrides: Partial<CuiTheme>): CuiTheme => ({
+  space: [0, 4, 8, 16, 24, 32, 64, 128, 256],
   breakpoints: {
     sm: 0,
     md: 900,
@@ -81,7 +86,7 @@ const createCuiTheme = (overrides: Partial<CuiTheme>): CuiTheme => ({
     },
     semantic: {
       primary: {
-        main: `#1976d2`,
+        main: `#003187`,
         contrastText: `#fff`,
       },
       secondary: {
@@ -89,20 +94,28 @@ const createCuiTheme = (overrides: Partial<CuiTheme>): CuiTheme => ({
         contrastText: `#fff`,
       },
       danger: {
-        main: `#d32f2f`,
+        main: `#e32828`,
         contrastText: `#fff`,
       },
       success: {
-        main: `#2e7d32`,
+        main: `#0d6def`,
         contrastText: `#fff`,
       },
       info: {
-        main: `#0288d1`,
+        main: `#3a5e8f`,
         contrastText: `#fff`,
       },
       warning: {
-        main: `#ed6c02`,
+        main: `#f1ce17`,
         contrastText: `#fff`,
+      },
+      dark1: {
+        main: `#616161`,
+        contrastText: `#fff`,
+      },
+      light2: {
+        main: `#E2E2E2`,
+        contrastText: `#000`,
       },
     },
     ...overrides.palette,
@@ -110,31 +123,34 @@ const createCuiTheme = (overrides: Partial<CuiTheme>): CuiTheme => ({
   fontFamily: `inherit`,
   typography: {
     h1: {
-      fontSize: `6rem`,
+      fontSize: `60px`,
     },
     h2: {
-      fontSize: `3.75rem`,
+      fontSize: `48px`,
     },
     h3: {
-      fontSize: `3rem`,
+      fontSize: `34px`,
     },
     h4: {
-      fontSize: `2.125rem`,
+      fontSize: `24px`,
     },
     h5: {
-      fontSize: `1.5rem`,
+      fontSize: `20px`,
     },
     h6: {
-      fontSize: `1.25rem`,
+      fontSize: `18px`,
+    },
+    subtitle: {
+      fontSize: `16px`,
     },
     p1: {
-      fontSize: `1rem`,
+      fontSize: `16px`,
     },
     p2: {
-      fontSize: `0.875rem`,
+      fontSize: `14px`,
     },
     caption: {
-      fontSize: `0.75rem`,
+      fontSize: `12px`,
     },
     ...overrides.typography,
   },

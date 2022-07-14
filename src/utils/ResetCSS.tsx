@@ -29,6 +29,9 @@ const ResetCSS = createGlobalStyle`
     hr {
         margin: 0;
     }
+    :focus {
+        outline: 0;
+    }
 `;
 
 export default ResetCSS;
