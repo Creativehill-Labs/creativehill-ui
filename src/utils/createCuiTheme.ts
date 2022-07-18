@@ -63,7 +63,7 @@ export interface CuiTheme {
 }
 
 const createCuiTheme = (overrides: Partial<CuiTheme>): CuiTheme => ({
-  space: [0, 4, 8, 16, 24, 32, 64, 128, 256],
+  space: [0, 4, 8, 12, 16, 24, 32, 48, 64, 128, 256],
   breakpoints: {
     sm: 0,
     md: 900,
