@@ -10,6 +10,15 @@ export const parameters = {
       date: /Date$/,
     },
   },
+  backgrounds: {
+    default: 'grey',
+    values: [
+      {
+        name: 'grey',
+        value: '#EDEDED',
+      },
+    ],
+  },
 }
 
 const globalDecorator = (StoryFn) => (
