@@ -1,8 +1,11 @@
+import { addParameters } from '@storybook/react';
 import { withThemesProvider } from 'themeprovider-storybook';
 import createCuiTheme from '../src/utils/createCuiTheme';
 import ResetCSS from '../src/utils/ResetCSS';
 
+
 export const parameters = {
+  viewMode: 'docs',
   actions: { argTypesRegex: "^on[A-Z].*" },
   controls: {
     matchers: {

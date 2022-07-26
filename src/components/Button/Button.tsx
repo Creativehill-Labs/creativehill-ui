@@ -1,7 +1,7 @@
 import React, { ButtonHTMLAttributes, FC, ReactNode } from 'react';
 import styled from 'styled-components';
 import createTransition from '../../utils/createTransition';
-import { fillVariants, iconSizeVariants, sizeVariants } from './theme';
+import { variants, iconSizeVariants, sizeVariants } from './theme';
 import {
   ButtonColor,
   buttonColors,
@@ -15,7 +15,7 @@ export interface ButtonProps {
   variant?: ButtonVariant;
   color?: ButtonColor;
   size?: ButtonSize;
-  width?: string;
+  fullWidth?: boolean;
   iconLeft?: ReactNode;
   iconRight?: ReactNode;
 }
@@ -37,8 +37,8 @@ const ButtonBase = styled.button<ButtonProps>`
   ])};
 
   ${({ size }) => size && sizeVariants[size]}
-  ${({ variant: fill }) => fill && fillVariants[fill]}
-  width: ${({ width }) => width};
+  ${({ variant }) => variant && variants[variant]}
+  width: ${({ fullWidth }) => fullWidth && `100%`};
 
   :disabled {
     background-color: ${({ theme }) => theme.palette.light2.main};
@@ -59,13 +59,9 @@ const IconRightWrapper = styled.span<{ size?: ButtonSize }>`
   ${({ size }) => size && iconSizeVariants[size]}
 `;
 
-const Button: FC<ButtonHTMLAttributes<HTMLButtonElement> & ButtonProps> = ({
-  children,
-  iconLeft,
-  iconRight,
-  size,
-  ...props
-}) => {
+const Button: FC<
+  Omit<ButtonHTMLAttributes<HTMLButtonElement>, 'color'> & ButtonProps
+> = ({ children, iconLeft, iconRight, size, ...props }) => {
   const wrappedIconLeft = iconLeft && (
     <IconLeftWrapper size={size}>{iconLeft}</IconLeftWrapper>
   );

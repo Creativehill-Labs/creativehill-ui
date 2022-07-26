@@ -52,7 +52,7 @@ export const Default = () => (
               label="로그인 상태 유지"
             />
             <FormControl>
-              <Button width="100%">로그인</Button>
+              <Button fullWidth>로그인</Button>
             </FormControl>
           </Box>
         </form>

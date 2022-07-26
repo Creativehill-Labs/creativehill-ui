@@ -27,7 +27,7 @@ export const iconSizeVariants = {
   },
 };
 
-export const fillVariants = {
+export const variants = {
   [buttonVariants.FILLED]: css<ButtonProps>`
     background-color: ${({ theme, color }) =>
       color && theme.palette[color].main};

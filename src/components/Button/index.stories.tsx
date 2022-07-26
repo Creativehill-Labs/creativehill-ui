@@ -11,11 +11,6 @@ export default {
   component: Button,
   argTypes: {
     ...hideUnnecessaryControls(),
-    color: {
-      control: `select`,
-      options: Object.values(buttonColors),
-      defaultValue: buttonColors.PRIMARY,
-    },
     iconLeft: {
       control: false,
     },
