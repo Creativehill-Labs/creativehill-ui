@@ -1,10 +1,10 @@
 import React, { FC } from 'react';
 
 const IconCheck: FC = () => (
-  <svg viewBox="0 0 14 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <svg viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
     <path
-      d="M4.59631 8.90619L1.46881 5.77869L0.403809 6.83619L4.59631 11.0287L13.5963 2.02869L12.5388 0.971191L4.59631 8.90619Z"
-      fill="white"
+      d="M6.59631 11.9062L3.46881 8.77875L2.40381 9.83625L6.59631 14.0287L15.5963 5.02875L14.5388 3.97125L6.59631 11.9062Z"
+      fill="currentColor"
     />
   </svg>
 );
