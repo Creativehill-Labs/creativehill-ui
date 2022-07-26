@@ -19,4 +19,5 @@ const Template: ComponentStory<typeof Checkbox> = (args) => (
 export const Default = Template.bind({});
 Default.args = {
   color: checkboxColors.PRIMARY,
+  disabled: false,
 };

@@ -14,10 +14,6 @@ export default {
       options: Object.values(buttonColors),
       defaultValue: buttonColors.PRIMARY,
     },
-    disabled: {
-      control: `boolean`,
-      defaultValue: false,
-    },
   },
 } as ComponentMeta<typeof Button>;
 
@@ -29,4 +25,5 @@ Default.args = {
   variant: buttonVariants.FILLED,
   color: buttonColors.PRIMARY,
   size: buttonSizes.MD,
+  disabled: false,
 };
