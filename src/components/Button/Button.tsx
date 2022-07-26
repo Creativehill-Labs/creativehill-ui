@@ -1,6 +1,7 @@
+import React, { ButtonHTMLAttributes, FC, ReactNode } from 'react';
 import styled from 'styled-components';
 import createTransition from '../../utils/createTransition';
-import { fillVariants, sizeVariants } from './theme';
+import { fillVariants, iconSizeVariants, sizeVariants } from './theme';
 import {
   ButtonColor,
   buttonColors,
@@ -15,13 +16,19 @@ export interface ButtonProps {
   color?: ButtonColor;
   size?: ButtonSize;
   width?: string;
+  iconLeft?: ReactNode;
+  iconRight?: ReactNode;
 }
 
-const Button = styled.button<ButtonProps>`
+const ButtonBase = styled.button<ButtonProps>`
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   border-radius: 5px;
   transition: opacity 0.1s linear;
   cursor: pointer;
   font-weight: 500;
+  vertical-align: middle;
   transition: ${createTransition([
     `background-color`,
     `box-shadow`,
@@ -41,8 +48,42 @@ const Button = styled.button<ButtonProps>`
   }
 `;
 
+const IconLeftWrapper = styled.span<{ size?: ButtonSize }>`
+  display: inherit;
+  margin-right: 8px;
+  ${({ size }) => size && iconSizeVariants[size]}
+`;
+const IconRightWrapper = styled.span<{ size?: ButtonSize }>`
+  display: inherit;
+  margin-left: 8px;
+  ${({ size }) => size && iconSizeVariants[size]}
+`;
+
+const Button: FC<ButtonHTMLAttributes<HTMLButtonElement> & ButtonProps> = ({
+  children,
+  iconLeft,
+  iconRight,
+  size,
+  ...props
+}) => {
+  const wrappedIconLeft = iconLeft && (
+    <IconLeftWrapper size={size}>{iconLeft}</IconLeftWrapper>
+  );
+
+  const wrappedIconRight = iconRight && (
+    <IconRightWrapper size={size}>{iconRight}</IconRightWrapper>
+  );
+
+  return (
+    <ButtonBase size={size} {...props}>
+      {wrappedIconLeft}
+      {children}
+      {wrappedIconRight}
+    </ButtonBase>
+  );
+};
+
 Button.defaultProps = {
-  type: `button`,
   color: buttonColors.PRIMARY,
   variant: buttonVariants.FILLED,
   size: buttonSizes.MD,

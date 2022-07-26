@@ -16,6 +16,7 @@ const ResetCSS = createGlobalStyle`
     body {
         padding: 0;
         margin: 0;
+        line-height: 1;
     }
     a {
         color: inherit;
@@ -25,6 +26,7 @@ const ResetCSS = createGlobalStyle`
         appearance: none;
         border: initial;
         background-color: initial;
+        font: inherit;
     }
     hr {
         margin: 0;

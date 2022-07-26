@@ -8,13 +8,22 @@ export const sizeVariants = {
     fontSize: `14px`,
     fontWeight: 600,
     lineHeight: `24px`,
-    padding: `7px 18px`,
+    padding: `7px 40px`,
   },
   [buttonSizes.MD]: {
     fontSize: `16px`,
     fontWeight: 600,
     lineHeight: `26px`,
-    padding: `11px 20px`,
+    padding: `11px 40px`,
+  },
+};
+
+export const iconSizeVariants = {
+  [buttonSizes.SM]: {
+    fontSize: `14px`,
+  },
+  [buttonSizes.MD]: {
+    fontSize: `16px`,
   },
 };
 
