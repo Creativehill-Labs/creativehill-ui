@@ -22,11 +22,11 @@ const TextField = styled(UnstyledTextField)`
     font-size: 16px;
 
     ::placeholder {
-      color: ${({ theme }) => theme.palette.semantic.dark1.main};
+      color: ${({ theme }) => theme.palette.dark1.main};
     }
 
     :focus {
-      border: 1px solid ${({ theme }) => theme.palette.semantic.primary.main};
+      border: 1px solid ${({ theme }) => theme.palette.primary.main};
     }
   }
 `;

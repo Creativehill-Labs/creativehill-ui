@@ -26,19 +26,21 @@ interface PaletteBasicColor {
 }
 
 export interface PaletteConfig {
-  basic: {
-    grey: PaletteBasicColor;
-  };
-  semantic: {
-    primary: PaletteSemanticColor;
-    secondary: PaletteSemanticColor;
-    success: PaletteSemanticColor;
-    danger: PaletteSemanticColor;
-    warning: PaletteSemanticColor;
-    info: PaletteSemanticColor;
-    dark1: PaletteSemanticColor;
-    light2: PaletteSemanticColor;
-  };
+  primary: PaletteSemanticColor;
+  secondary: PaletteSemanticColor;
+  success: PaletteSemanticColor;
+  danger: PaletteSemanticColor;
+  warning: PaletteSemanticColor;
+  info: PaletteSemanticColor;
+  dark1: PaletteSemanticColor;
+  dark2: PaletteSemanticColor;
+  dark3: PaletteSemanticColor;
+  grey1: PaletteSemanticColor;
+  grey2: PaletteSemanticColor;
+  grey3: PaletteSemanticColor;
+  light1: PaletteSemanticColor;
+  light2: PaletteSemanticColor;
+  light3: PaletteSemanticColor;
 }
 
 interface TypographyConfig {
@@ -71,52 +73,67 @@ const createCuiTheme = (overrides: Partial<CuiTheme>): CuiTheme => ({
     ...overrides.breakpoints,
   },
   palette: {
-    basic: {
-      grey: {
-        100: `#f5f5f5`,
-        200: `#eeeeee`,
-        300: `#e0e0e0`,
-        400: `#bdbdbd`,
-        500: `#9e9e9e`,
-        600: `#757575`,
-        700: `#616161`,
-        800: `#424242`,
-        900: `#212121`,
-      },
+    primary: {
+      main: `#003187`,
+      dark: `#042153`,
+      light: `#335BA0`,
+      contrastText: `#fff`,
     },
-    semantic: {
-      primary: {
-        main: `#003187`,
-        contrastText: `#fff`,
-      },
-      secondary: {
-        main: `#9c27b0`,
-        contrastText: `#fff`,
-      },
-      danger: {
-        main: `#e32828`,
-        contrastText: `#fff`,
-      },
-      success: {
-        main: `#0d6def`,
-        contrastText: `#fff`,
-      },
-      info: {
-        main: `#3a5e8f`,
-        contrastText: `#fff`,
-      },
-      warning: {
-        main: `#f1ce17`,
-        contrastText: `#fff`,
-      },
-      dark1: {
-        main: `#616161`,
-        contrastText: `#fff`,
-      },
-      light2: {
-        main: `#E2E2E2`,
-        contrastText: `#000`,
-      },
+    secondary: {
+      main: `#9c27b0`,
+      contrastText: `#fff`,
+    },
+    danger: {
+      main: `#e32828`,
+      contrastText: `#fff`,
+    },
+    success: {
+      main: `#0d6def`,
+      contrastText: `#fff`,
+    },
+    info: {
+      main: `#3a5e8f`,
+      contrastText: `#fff`,
+    },
+    warning: {
+      main: `#f1ce17`,
+      contrastText: `#fff`,
+    },
+    dark1: {
+      main: `#626262`,
+      contrastText: `#fff`,
+    },
+    dark2: {
+      main: `#4D4B4B`,
+      contrastText: `#fff`,
+    },
+    dark3: {
+      main: `#000000`,
+      contrastText: `#fff`,
+    },
+    grey1: {
+      main: `#F0F0F0`,
+      contrastText: `#000`,
+    },
+    grey2: {
+      main: `#E2E2E2`,
+      contrastText: `#000`,
+    },
+    grey3: {
+      main: `#D4D4D4`,
+      contrastText: `#000`,
+    },
+    light1: {
+      main: `#F0F0F0`,
+      contrastText: `#000`,
+    },
+    light2: {
+      main: `#E2E2E2`,
+      contrastText: `#000`,
+    },
+    light3: {
+      main: `#D4D4D4`,
+      contrastText: `#000`,
     },
     ...overrides.palette,
   },

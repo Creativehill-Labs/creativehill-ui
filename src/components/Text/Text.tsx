@@ -16,7 +16,7 @@ export interface TextProps extends SpaceProps, TypographyProps {
 }
 
 const Text = styled(`span`)<TextProps>`
-  color: ${({ theme, color }) => color && theme.palette.semantic[color].main};
+  color: ${({ theme, color }) => color && theme.palette[color].main};
   ${space}
   ${typography}
   ${variant({

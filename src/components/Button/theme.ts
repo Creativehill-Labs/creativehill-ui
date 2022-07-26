@@ -20,16 +20,15 @@ export const sizeVariants = {
 export const fillVariants = {
   [buttonFills.SOLID]: css<ButtonProps>`
     background-color: ${({ theme, color }) =>
-      color && theme.palette.semantic[color].main};
-    color: ${({ theme, color }) =>
-      color && theme.palette.semantic[color].contrastText};
+      color && theme.palette[color].main};
+    color: ${({ theme, color }) => color && theme.palette[color].contrastText};
   `,
   [buttonFills.OUTLINE]: css<ButtonProps>`
     border: 1px solid
-      ${({ theme, color }) => color && theme.palette.semantic[color].main};
-    color: ${({ theme, color }) => color && theme.palette.semantic[color].main};
+      ${({ theme, color }) => color && theme.palette[color].main};
+    color: ${({ theme, color }) => color && theme.palette[color].main};
   `,
   [buttonFills.CLEAR]: css<ButtonProps>`
-    color: ${({ theme, color }) => color && theme.palette.semantic[color].main};
+    color: ${({ theme, color }) => color && theme.palette[color].main};
   `,
 };
