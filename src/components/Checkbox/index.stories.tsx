@@ -1,6 +1,7 @@
 import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 import Checkbox from './Checkbox';
+import { checkboxColors } from './types';
 
 export default {
   title: `Components/Checkbox`,
@@ -13,4 +14,6 @@ const Template: ComponentStory<typeof Checkbox> = (args) => (
 );
 
 export const Default = Template.bind({});
-Default.args = {};
+Default.args = {
+  color: checkboxColors.PRIMARY,
+};

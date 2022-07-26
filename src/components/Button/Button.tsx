@@ -36,10 +36,10 @@ const Button = styled.button<ButtonProps>`
 `;
 
 Button.defaultProps = {
+  type: `button`,
   color: buttonColors.PRIMARY,
   fill: buttonFills.SOLID,
   size: buttonSizes.MD,
-  type: `button`,
 };
 
 export default Button;
