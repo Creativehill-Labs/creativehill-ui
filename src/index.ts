@@ -9,6 +9,8 @@ export { default as TextField } from './components/TextField/TextField';
 
 // Utils
 export { default as ResetCSS } from './utils/ResetCSS';
+export { default as hexToRgb } from './utils/hexToRgb';
+export { default as createTransition } from './utils/createTransition';
 
 // Icons
 export { default as IconCheck } from './icons/IconCheck';

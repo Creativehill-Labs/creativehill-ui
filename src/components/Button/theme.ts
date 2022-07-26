@@ -1,4 +1,5 @@
 import { css } from 'styled-components';
+import hexToRgb from '../../utils/hexToRgb';
 import { ButtonProps } from './Button';
 import { buttonFills, buttonSizes } from './types';
 
@@ -22,11 +23,31 @@ export const fillVariants = {
     background-color: ${({ theme, color }) =>
       color && theme.palette[color].main};
     color: ${({ theme, color }) => color && theme.palette[color].contrastText};
+    :hover {
+      background-color: ${({ theme, color }) =>
+        color && theme.palette[color].light};
+    }
+    :active {
+      background-color: ${({ theme, color }) =>
+        color && theme.palette[color].dark};
+    }
   `,
   [buttonFills.OUTLINE]: css<ButtonProps>`
     border: 1px solid
       ${({ theme, color }) => color && theme.palette[color].main};
     color: ${({ theme, color }) => color && theme.palette[color].main};
+    :hover {
+      background-color: rgba(
+        ${({ theme, color }) => color && hexToRgb(theme.palette[color].main)},
+        0.1
+      );
+    }
+    :active {
+      background-color: ${({ theme, color }) =>
+        color && theme.palette[color].dark};
+      color: ${({ theme, color }) =>
+        color && theme.palette[color].contrastText};
+    }
   `,
   [buttonFills.CLEAR]: css<ButtonProps>`
     color: ${({ theme, color }) => color && theme.palette[color].main};

@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import createTransition from '../../utils/createTransition';
 import { fillVariants, sizeVariants } from './theme';
 import {
   ButtonColor,
@@ -21,10 +22,12 @@ const Button = styled.button<ButtonProps>`
   transition: opacity 0.1s linear;
   cursor: pointer;
   font-weight: 500;
-
-  :hover {
-    opacity: 0.5;
-  }
+  transition: ${createTransition([
+    `background-color`,
+    `box-shadow`,
+    `border-color`,
+    `color`,
+  ])};
 
   :disabled {
     opacity: 0.5;
