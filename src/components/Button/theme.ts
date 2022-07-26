@@ -5,17 +5,15 @@ import { buttonFills, buttonSizes } from './types';
 export const sizeVariants = {
   [buttonSizes.SM]: {
     fontSize: `14px`,
+    fontWeight: 600,
     lineHeight: `24px`,
     padding: `7px 18px`,
   },
   [buttonSizes.MD]: {
     fontSize: `16px`,
+    fontWeight: 600,
     lineHeight: `26px`,
     padding: `11px 20px`,
-  },
-  [buttonSizes.LG]: {
-    fontSize: `22px`,
-    padding: `16px 24px`,
   },
 };
 

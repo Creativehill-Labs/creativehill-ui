@@ -1,12 +1,7 @@
 import React, { forwardRef, InputHTMLAttributes } from 'react';
 import styled from 'styled-components';
 import { IconCheck } from '../..';
-import {
-  CheckboxColor,
-  checkboxColors,
-  CheckboxSize,
-  checkboxSizes,
-} from './types';
+import { CheckboxColor, checkboxColors } from './types';
 
 const CheckboxInput = styled.input`
   cursor: inherit;
@@ -57,7 +52,6 @@ const CheckboxContainer = styled.div<CheckboxProps>`
 
 export interface CheckboxProps {
   color?: CheckboxColor;
-  size?: CheckboxSize;
 }
 
 export interface CheckboxElementProps
@@ -69,11 +63,11 @@ const Checkbox = styled(
     HTMLInputElement,
     Omit<InputHTMLAttributes<HTMLInputElement>, 'color' | 'size'> &
       CheckboxProps
-  >(({ className, color, size, ...props }, ref) => {
+  >(({ className, color, ...props }, ref) => {
     return (
       <CheckboxContainer className={className} color={color}>
         <CheckboxInput ref={ref} {...props} />
-        <CheckIconWrapper size={size} color={color}>
+        <CheckIconWrapper color={color}>
           <IconCheck />
         </CheckIconWrapper>
       </CheckboxContainer>
@@ -83,7 +77,6 @@ const Checkbox = styled(
 
 Checkbox.defaultProps = {
   type: `checkbox`,
-  size: checkboxSizes.MD,
   color: checkboxColors.PRIMARY,
 };
 

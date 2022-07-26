@@ -22,7 +22,6 @@ export type ButtonColor = ValueOf<typeof buttonColors>;
 export const buttonSizes = {
   SM: `sm`,
   MD: `md`,
-  LG: `lg`,
 } as const;
 
 export type ButtonSize = ValueOf<typeof buttonSizes>;

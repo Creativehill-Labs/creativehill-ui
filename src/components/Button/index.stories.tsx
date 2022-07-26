@@ -1,7 +1,7 @@
 import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 import Button from './Button';
-import { buttonColors } from './types';
+import { buttonColors, buttonFills, buttonSizes } from './types';
 
 export default {
   title: `Components/Button`,
@@ -20,4 +20,7 @@ const Template: ComponentStory<typeof Button> = (args) => <Button {...args} />;
 export const Default = Template.bind({});
 Default.args = {
   children: `버튼`,
+  color: buttonColors.PRIMARY,
+  fill: buttonFills.SOLID,
+  size: buttonSizes.MD,
 };

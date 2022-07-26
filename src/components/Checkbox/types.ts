@@ -10,11 +10,3 @@ export const checkboxColors = {
 } as const;
 
 export type CheckboxColor = ValueOf<typeof checkboxColors>;
-
-export const checkboxSizes = {
-  SM: `sm`,
-  MD: `md`,
-  LG: `lg`,
-} as const;
-
-export type CheckboxSize = ValueOf<typeof checkboxSizes>;
