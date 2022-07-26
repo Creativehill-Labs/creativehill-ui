@@ -2,11 +2,14 @@ import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 import Checkbox from './Checkbox';
 import { checkboxColors } from './types';
+import { hideUnnecessaryControls } from '../../helpers/storybookHelper';
 
 export default {
   title: `Components/Checkbox`,
   component: Checkbox,
-  argTypes: {},
+  argTypes: {
+    ...hideUnnecessaryControls(),
+  },
 } as ComponentMeta<typeof Checkbox>;
 
 const Template: ComponentStory<typeof Checkbox> = (args) => (

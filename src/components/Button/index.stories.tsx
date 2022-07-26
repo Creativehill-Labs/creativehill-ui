@@ -2,11 +2,13 @@ import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 import Button from './Button';
 import { buttonColors, buttonFills, buttonSizes } from './types';
+import { hideUnnecessaryControls } from '../../helpers/storybookHelper';
 
 export default {
   title: `Components/Button`,
   component: Button,
   argTypes: {
+    ...hideUnnecessaryControls(),
     color: {
       control: `select`,
       options: Object.values(buttonColors),
