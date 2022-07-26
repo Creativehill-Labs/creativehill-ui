@@ -29,13 +29,16 @@ const Button = styled.button<ButtonProps>`
     `color`,
   ])};
 
-  :disabled {
-    opacity: 0.5;
-    cursor: default;
-  }
   ${({ size }) => size && sizeVariants[size]}
   ${({ variant: fill }) => fill && fillVariants[fill]}
   width: ${({ width }) => width};
+
+  :disabled {
+    background-color: ${({ theme }) => theme.palette.light2.main};
+    color: ${({ theme }) => theme.palette.grey2.main};
+    pointer-events: none;
+    cursor: default;
+  }
 `;
 
 Button.defaultProps = {

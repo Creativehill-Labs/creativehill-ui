@@ -99,30 +99,6 @@ const createCuiTheme = (overrides: Partial<CuiTheme>): CuiTheme => ({
       main: `#f1ce17`,
       contrastText: `#fff`,
     },
-    dark1: {
-      main: `#626262`,
-      contrastText: `#fff`,
-    },
-    dark2: {
-      main: `#4D4B4B`,
-      contrastText: `#fff`,
-    },
-    dark3: {
-      main: `#000000`,
-      contrastText: `#fff`,
-    },
-    grey1: {
-      main: `#F0F0F0`,
-      contrastText: `#000`,
-    },
-    grey2: {
-      main: `#E2E2E2`,
-      contrastText: `#000`,
-    },
-    grey3: {
-      main: `#D4D4D4`,
-      contrastText: `#000`,
-    },
     light1: {
       main: `#F0F0F0`,
       contrastText: `#000`,
@@ -134,6 +110,30 @@ const createCuiTheme = (overrides: Partial<CuiTheme>): CuiTheme => ({
     light3: {
       main: `#D4D4D4`,
       contrastText: `#000`,
+    },
+    grey1: {
+      main: `#C0C0C0`,
+      contrastText: `#000`,
+    },
+    grey2: {
+      main: `#A7A7A7`,
+      contrastText: `#000`,
+    },
+    grey3: {
+      main: `#878787`,
+      contrastText: `#000`,
+    },
+    dark1: {
+      main: `#626262`,
+      contrastText: `#fff`,
+    },
+    dark2: {
+      main: `#4D4B4B`,
+      contrastText: `#fff`,
+    },
+    dark3: {
+      main: `#000000`,
+      contrastText: `#fff`,
     },
     ...overrides.palette,
   },

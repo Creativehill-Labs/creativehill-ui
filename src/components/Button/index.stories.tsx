@@ -14,6 +14,10 @@ export default {
       options: Object.values(buttonColors),
       defaultValue: buttonColors.PRIMARY,
     },
+    disabled: {
+      control: `boolean`,
+      defaultValue: false,
+    },
   },
 } as ComponentMeta<typeof Button>;
 

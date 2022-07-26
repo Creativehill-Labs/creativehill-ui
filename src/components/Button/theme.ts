@@ -48,6 +48,9 @@ export const fillVariants = {
       color: ${({ theme, color }) =>
         color && theme.palette[color].contrastText};
     }
+    :disabled {
+      border: none;
+    }
   `,
   [buttonVariants.TEXT]: css<ButtonProps>`
     color: ${({ theme, color }) => color && theme.palette[color].main};
