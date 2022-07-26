@@ -16,6 +16,12 @@ export default {
       options: Object.values(buttonColors),
       defaultValue: buttonColors.PRIMARY,
     },
+    iconLeft: {
+      control: false,
+    },
+    iconRight: {
+      control: false,
+    },
   },
 } as ComponentMeta<typeof Button>;
 
