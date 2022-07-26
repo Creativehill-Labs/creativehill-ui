@@ -1,12 +1,12 @@
 import { ValueOf } from '../../utils/tsHelper';
 
-export const buttonFills = {
-  SOLID: `solid`,
-  OUTLINE: `outline`,
-  CLEAR: `clear`,
+export const buttonVariants = {
+  FILLED: `filled`,
+  OUTLINED: `outlined`,
+  TEXT: `text`,
 } as const;
 
-export type ButtonFill = ValueOf<typeof buttonFills>;
+export type ButtonVariant = ValueOf<typeof buttonVariants>;
 
 export const buttonColors = {
   PRIMARY: `primary`,

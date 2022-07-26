@@ -1,7 +1,7 @@
 import { css } from 'styled-components';
 import hexToRgb from '../../utils/hexToRgb';
 import { ButtonProps } from './Button';
-import { buttonFills, buttonSizes } from './types';
+import { buttonVariants, buttonSizes } from './types';
 
 export const sizeVariants = {
   [buttonSizes.SM]: {
@@ -19,7 +19,7 @@ export const sizeVariants = {
 };
 
 export const fillVariants = {
-  [buttonFills.SOLID]: css<ButtonProps>`
+  [buttonVariants.FILLED]: css<ButtonProps>`
     background-color: ${({ theme, color }) =>
       color && theme.palette[color].main};
     color: ${({ theme, color }) => color && theme.palette[color].contrastText};
@@ -32,7 +32,7 @@ export const fillVariants = {
         color && theme.palette[color].dark};
     }
   `,
-  [buttonFills.OUTLINE]: css<ButtonProps>`
+  [buttonVariants.OUTLINED]: css<ButtonProps>`
     border: 1px solid
       ${({ theme, color }) => color && theme.palette[color].main};
     color: ${({ theme, color }) => color && theme.palette[color].main};
@@ -49,7 +49,7 @@ export const fillVariants = {
         color && theme.palette[color].contrastText};
     }
   `,
-  [buttonFills.CLEAR]: css<ButtonProps>`
+  [buttonVariants.TEXT]: css<ButtonProps>`
     color: ${({ theme, color }) => color && theme.palette[color].main};
   `,
 };

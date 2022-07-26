@@ -6,12 +6,12 @@ import {
   buttonColors,
   ButtonSize,
   buttonSizes,
-  ButtonFill,
-  buttonFills,
+  ButtonVariant,
+  buttonVariants,
 } from './types';
 
 export interface ButtonProps {
-  fill?: ButtonFill;
+  variant?: ButtonVariant;
   color?: ButtonColor;
   size?: ButtonSize;
   width?: string;
@@ -34,14 +34,14 @@ const Button = styled.button<ButtonProps>`
     cursor: default;
   }
   ${({ size }) => size && sizeVariants[size]}
-  ${({ fill }) => fill && fillVariants[fill]}
+  ${({ variant: fill }) => fill && fillVariants[fill]}
   width: ${({ width }) => width};
 `;
 
 Button.defaultProps = {
   type: `button`,
   color: buttonColors.PRIMARY,
-  fill: buttonFills.SOLID,
+  variant: buttonVariants.FILLED,
   size: buttonSizes.MD,
 };
 
