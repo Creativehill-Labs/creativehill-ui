@@ -25,10 +25,6 @@ const Template: ComponentStory<typeof Button> = (args) => <Button {...args} />;
 export const Default = Template.bind({});
 Default.args = {
   children: `버튼`,
-  variant: buttonVariants.FILLED,
-  color: buttonColors.PRIMARY,
-  size: buttonSizes.MD,
-  disabled: false,
 };
 
 export const IconLeft = Template.bind({});

@@ -1,7 +1,6 @@
 import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 import Checkbox from './Checkbox';
-import { checkboxColors } from './types';
 import { hideUnnecessaryControls } from '../../helpers/storybookHelper';
 
 export default {
@@ -17,7 +16,4 @@ const Template: ComponentStory<typeof Checkbox> = (args) => (
 );
 
 export const Default = Template.bind({});
-Default.args = {
-  color: checkboxColors.PRIMARY,
-  disabled: false,
-};
+Default.args = {};
