@@ -6,6 +6,7 @@ export { default as CardContent } from './components/CardContent/CardContent';
 export { default as CardHeader } from './components/CardHeader/CardHeader';
 export { default as Text } from './components/Text/Text';
 export { default as TextField } from './components/TextField/TextField';
+export { default as FormControlLabel } from './components/FormControlLabel/FormControlLabel';
 
 // Utils
 export { default as ResetCSS } from './utils/ResetCSS';
