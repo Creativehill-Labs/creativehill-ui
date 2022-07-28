@@ -36,10 +36,6 @@ export const variants = {
       background-color: ${({ theme, color }) =>
         color && theme.palette[color].light};
     }
-    :active {
-      background-color: ${({ theme, color }) =>
-        color && theme.palette[color].dark};
-    }
   `,
   [buttonVariants.OUTLINED]: css<ButtonProps>`
     border: 1px solid
@@ -50,12 +46,6 @@ export const variants = {
         ${({ theme, color }) => color && hexToRgb(theme.palette[color].main)},
         0.1
       );
-    }
-    :active {
-      background-color: ${({ theme, color }) =>
-        color && theme.palette[color].dark};
-      color: ${({ theme, color }) =>
-        color && theme.palette[color].contrastText};
     }
     :disabled {
       border: none;
