@@ -50,12 +50,14 @@ const ButtonBase = styled.button<ButtonProps>`
 
 const IconLeftWrapper = styled.span<{ size?: ButtonSize }>`
   display: inherit;
+  margin-left: -8px;
   margin-right: 8px;
   ${({ size }) => size && iconSizeVariants[size]}
 `;
 const IconRightWrapper = styled.span<{ size?: ButtonSize }>`
   display: inherit;
   margin-left: 8px;
+  margin-right: -8px;
   ${({ size }) => size && iconSizeVariants[size]}
 `;
 
