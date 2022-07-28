@@ -17,6 +17,9 @@ export default {
     iconRight: {
       control: false,
     },
+    disabled: {
+      type: `boolean`,
+    },
   },
 } as ComponentMeta<typeof Button>;
 
@@ -33,7 +36,6 @@ IconLeft.args = {
   variant: buttonVariants.FILLED,
   color: buttonColors.PRIMARY,
   size: buttonSizes.MD,
-  disabled: false,
   iconLeft: <IconChevronLeft />,
 };
 
@@ -43,6 +45,5 @@ IconRight.args = {
   variant: buttonVariants.FILLED,
   color: buttonColors.PRIMARY,
   size: buttonSizes.MD,
-  disabled: false,
   iconRight: <IconChevronRight />,
 };

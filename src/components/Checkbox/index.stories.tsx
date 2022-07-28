@@ -8,6 +8,9 @@ export default {
   component: Checkbox,
   argTypes: {
     ...hideUnnecessaryControls(),
+    disabled: {
+      type: `boolean`,
+    },
   },
 } as ComponentMeta<typeof Checkbox>;
 

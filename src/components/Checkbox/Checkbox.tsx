@@ -21,10 +21,8 @@ const CheckIconWrapper = styled.div<CheckboxProps>`
   box-sizing: border-box;
   border-width: 2px;
   border-style: solid;
-  border-color: ${({ theme, color }) =>
-    color && theme.palette[color].main};
-  color: ${({ theme, color }) =>
-    color && theme.palette[color].contrastText};
+  border-color: ${({ theme, color }) => color && theme.palette[color].main};
+  color: ${({ theme, color }) => color && theme.palette[color].contrastText};
 
   > svg {
     display: block;
@@ -47,6 +45,9 @@ const CheckboxContainer = styled.div<CheckboxProps>`
     > svg {
       visibility: visible;
     }
+  }
+  input:disabled + ${CheckIconWrapper} {
+    border-color: ${({ theme }) => theme.palette.light3.main};
   }
 `;
 
