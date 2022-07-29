@@ -62,12 +62,12 @@ export interface CheckboxElementProps
 const Checkbox = styled(
   forwardRef<
     HTMLInputElement,
-    Omit<InputHTMLAttributes<HTMLInputElement>, 'color' | 'size'> &
+    Omit<InputHTMLAttributes<HTMLInputElement>, 'type' | 'color' | 'size'> &
       CheckboxProps
   >(({ className, color, ...props }, ref) => {
     return (
       <CheckboxContainer className={className} color={color}>
-        <CheckboxInput ref={ref} {...props} />
+        <CheckboxInput type="checkbox" ref={ref} {...props} />
         <CheckIconWrapper color={color}>
           <IconCheck />
         </CheckIconWrapper>
@@ -77,7 +77,6 @@ const Checkbox = styled(
 )``;
 
 Checkbox.defaultProps = {
-  type: `checkbox`,
   color: checkboxColors.PRIMARY,
 };
 
