@@ -53,10 +53,6 @@ export interface RadioProps {
   color?: RadioColor;
 }
 
-export interface RadioElementProps
-  extends Omit<InputHTMLAttributes<HTMLInputElement>, 'color' | 'size'>,
-    RadioProps {}
-
 const Radio = styled(
   forwardRef<
     HTMLInputElement,
