@@ -6,41 +6,34 @@ interface BreakpointConfig {
   lg: number;
 }
 
-interface PaletteSemanticColor {
+interface PaletteColor {
   light?: string;
   main: string;
   dark?: string;
   contrastText: string;
 }
-
-interface PaletteBasicColor {
-  100: string;
-  200: string;
-  300: string;
-  400: string;
-  500: string;
-  600: string;
-  700: string;
-  800: string;
-  900: string;
+interface PaletteBackgroundColor {
+  default: string;
+  paper: string;
 }
 
 export interface PaletteConfig {
-  primary: PaletteSemanticColor;
-  secondary: PaletteSemanticColor;
-  success: PaletteSemanticColor;
-  danger: PaletteSemanticColor;
-  warning: PaletteSemanticColor;
-  info: PaletteSemanticColor;
-  dark1: PaletteSemanticColor;
-  dark2: PaletteSemanticColor;
-  dark3: PaletteSemanticColor;
-  grey1: PaletteSemanticColor;
-  grey2: PaletteSemanticColor;
-  grey3: PaletteSemanticColor;
-  light1: PaletteSemanticColor;
-  light2: PaletteSemanticColor;
-  light3: PaletteSemanticColor;
+  primary: PaletteColor;
+  secondary: PaletteColor;
+  success: PaletteColor;
+  danger: PaletteColor;
+  warning: PaletteColor;
+  info: PaletteColor;
+  dark1: PaletteColor;
+  dark2: PaletteColor;
+  dark3: PaletteColor;
+  grey1: PaletteColor;
+  grey2: PaletteColor;
+  grey3: PaletteColor;
+  light1: PaletteColor;
+  light2: PaletteColor;
+  light3: PaletteColor;
+  background: PaletteBackgroundColor;
 }
 
 interface TypographyConfig {
@@ -134,6 +127,10 @@ const createCuiTheme = (overrides: Partial<CuiTheme>): CuiTheme => ({
     dark3: {
       main: `#000000`,
       contrastText: `#fff`,
+    },
+    background: {
+      default: `#ffffff`,
+      paper: `#ffffff`,
     },
     ...overrides.palette,
   },
