@@ -41,7 +41,7 @@ const SelectIcon = styled(IconChevronDown)`
   }
 `;
 
-const Select = styled(
+const SelectNative = styled(
   forwardRef<
     HTMLSelectElement,
     Omit<SelectHTMLAttributes<HTMLSelectElement>, 'type'>
@@ -55,8 +55,8 @@ const Select = styled(
   }),
 )``;
 
-Select.defaultProps = {
+SelectNative.defaultProps = {
   color: selectColors.PRIMARY,
 };
 
-export default Select;
+export default SelectNative;
