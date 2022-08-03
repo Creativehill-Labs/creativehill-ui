@@ -25,16 +25,18 @@ export default {
 
 export const Default: ComponentStory<typeof Menu> = ({ ...props }) => {
   const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
-
+  const open = Boolean(anchorEl);
   return (
-    <Paper width={160}>
-      <Button onClick={(e) => setAnchorEl(e.currentTarget)}>열기</Button>
-      <Menu anchorEl={anchorEl} open={!!anchorEl} {...props}>
+    <>
+      <Button onClick={(e) => setAnchorEl(open ? null : e.currentTarget)}>
+        열기
+      </Button>
+      <Menu anchorEl={anchorEl} open={open} {...props}>
         <MenuItem>옵션1</MenuItem>
         <MenuItem>옵션2</MenuItem>
         <MenuItem>옵션3</MenuItem>
       </Menu>
-    </Paper>
+    </>
   );
 };
 
