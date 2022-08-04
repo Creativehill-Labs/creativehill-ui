@@ -4,6 +4,7 @@ import styled from 'styled-components';
 interface FormControlProps {
   control: ReactElement;
   children?: ReactElement;
+  errored?: boolean;
 }
 
 const FormControlContainer = styled.div`
@@ -16,6 +17,7 @@ const FormControlContainer = styled.div`
 const UnstyledFormControl: FC<FormControlProps> = ({
   control,
   children,
+  errored,
   ...props
 }) => {
   const disabled = useMemo(
@@ -25,8 +27,14 @@ const UnstyledFormControl: FC<FormControlProps> = ({
 
   return (
     <FormControlContainer {...props}>
-      {control}
-      {children && React.cloneElement(children, { disabled })}
+      {React.cloneElement(control, {
+        errored,
+      })}
+      {children &&
+        React.cloneElement(children, {
+          disabled,
+          errored,
+        })}
     </FormControlContainer>
   );
 };

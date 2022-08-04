@@ -39,3 +39,19 @@ export const WithLabel: ComponentStory<typeof Select> = (props) => (
     <FormHelperText>*Helper Text</FormHelperText>
   </FormControl>
 );
+
+export const Errored: ComponentStory<typeof Select> = (props) => (
+  <FormControl
+    control={
+      <Select {...props}>
+        <option>옵션1</option>
+        <option>옵션2</option>
+        <option>옵션3</option>
+        <option>옵션4</option>
+      </Select>
+    }
+    errored
+  >
+    <FormHelperText>*Helper Text</FormHelperText>
+  </FormControl>
+);

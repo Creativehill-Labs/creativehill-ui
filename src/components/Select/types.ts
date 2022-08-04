@@ -1,5 +1,9 @@
 import { ValueOf } from '../../utils/tsHelper';
 
+export interface SelectProps {
+  errored?: boolean;
+}
+
 export const selectColors = {
   PRIMARY: `primary`,
   SECONDARY: `secondary`,
