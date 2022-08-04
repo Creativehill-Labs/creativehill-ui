@@ -18,9 +18,11 @@ const Backdrop = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  inset: 0px;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  left: 0;
   background-color: transparent;
-  z-index: -1;
 `;
 
 const ModalRoot = styled.div<{ open?: boolean }>`

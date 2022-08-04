@@ -31,6 +31,7 @@ interface BoundingRect {
 const Popover: FC<PropsWithChildren<PopoverProps>> = ({
   anchorEl,
   open,
+  onClose,
   ...props
 }) => {
   const [anchorOffset, setAnchorOffset] = useState<BoundingRect>({
@@ -75,7 +76,7 @@ const Popover: FC<PropsWithChildren<PopoverProps>> = ({
   }, [anchorEl, open, updateAnchorOffeset]);
 
   return (
-    <PopoverRoot open={open}>
+    <PopoverRoot open={open} onClose={onClose}>
       <PopoverPaper {...anchorOffset} {...props} />
     </PopoverRoot>
   );
