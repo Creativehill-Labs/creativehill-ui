@@ -62,7 +62,9 @@ const Select = styled(
   >(({ className, children, disabled, readOnly, value, ...props }, ref) => {
     const displayRef = useRef<HTMLDivElement | null>(null);
     const inputRef = useRef<HTMLInputElement | null>(null);
-    const [displayNode, setDisplayNode] = useState<HTMLDivElement | null>(null);
+    const [displayNode, setDisplayNode] = useState<
+      HTMLDivElement | undefined
+    >();
     const [displayValue, setDisplayValue] = useState<string>(``);
     const [open, setOpen] = useState(false);
     const childrenArray = useMemo(
@@ -169,6 +171,7 @@ const Select = styled(
         <SelectDisplay
           ref={handleDisplayRef}
           onMouseDown={disabled || readOnly ? undefined : handleMouseDown}
+          tabIndex={0}
         >
           {displayValue || <>&nbsp;</>}
         </SelectDisplay>
@@ -176,6 +179,7 @@ const Select = styled(
           ref={handleInputRef}
           disabled={disabled}
           readOnly={readOnly}
+          tabIndex={-1}
           {...props}
         />
         <SelectIcon />
