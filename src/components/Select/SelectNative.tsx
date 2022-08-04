@@ -1,5 +1,5 @@
 import React, { forwardRef, SelectHTMLAttributes } from 'react';
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import IconChevronDown from '../../icons/IconChevronDown';
 import { selectColors } from './types';
 
@@ -8,7 +8,7 @@ const SelectContainer = styled.div`
   position: relative;
 `;
 
-const SelectElement = styled.select`
+export const cssSelect = css`
   appearance: none;
   cursor: pointer;
   box-sizing: content-box;
@@ -26,6 +26,10 @@ const SelectElement = styled.select`
     border: 1px solid ${({ theme }) => theme.palette.light3.main};
     background-color: ${({ theme }) => theme.palette.light1.main};
   }
+`;
+
+const SelectElement = styled.select`
+  ${cssSelect}
 `;
 
 const SelectIcon = styled(IconChevronDown)`
