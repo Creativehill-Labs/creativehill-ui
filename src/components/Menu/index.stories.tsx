@@ -24,14 +24,21 @@ export default {
 } as ComponentMeta<typeof Menu>;
 
 export const Default: ComponentStory<typeof Menu> = ({ ...props }) => {
-  const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
+  const [anchorEl, setAnchorEl] = React.useState<HTMLElement | undefined>();
   const open = Boolean(anchorEl);
   return (
     <>
-      <Button onClick={(e) => setAnchorEl(open ? null : e.currentTarget)}>
+      <Button onClick={(e) => setAnchorEl(open ? undefined : e.currentTarget)}>
         열기
       </Button>
-      <Menu anchorEl={anchorEl} open={open} {...props}>
+      <Menu
+        {...props}
+        anchorEl={anchorEl}
+        open={open}
+        onClose={() => {
+          setAnchorEl(undefined);
+        }}
+      >
         <MenuItem>옵션1</MenuItem>
         <MenuItem>옵션2</MenuItem>
         <MenuItem>옵션3</MenuItem>
