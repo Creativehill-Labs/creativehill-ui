@@ -17,3 +17,4 @@ yarn-error.log*
 
 # builds
 /dist
+/storybook-static
