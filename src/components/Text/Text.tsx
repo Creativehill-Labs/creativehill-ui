@@ -16,12 +16,12 @@ export interface TextProps extends SpaceProps, TypographyProps {
 }
 
 const Text = styled(`span`)<TextProps>`
-  color: ${({ theme, color }) => color && theme.palette[color].main};
-  ${space}
-  ${typography}
   ${variant({
     key: `typography`,
   })}
+  color: ${({ theme, color }) => color && theme.palette[color].main};
+  ${space}
+  ${typography}
 `;
 
 export default Text;

@@ -1,5 +1,5 @@
 import React, { FC } from 'react';
-import SvgIcon from '../components/SvgIcon/SvgIcon';
+import SvgIcon from '../SvgIcon';
 
 const IconChevronDown: FC = (props) => (
   <SvgIcon

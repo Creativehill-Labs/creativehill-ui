@@ -14,4 +14,4 @@ export { default as hexToRgb } from './utils/hexToRgb';
 export { default as createTransition } from './utils/createTransition';
 
 // Icons
-export { default as IconCheck } from './icons/IconCheck';
+export { default as IconCheck } from './components/SvgIcon/Icons/IconCheck';

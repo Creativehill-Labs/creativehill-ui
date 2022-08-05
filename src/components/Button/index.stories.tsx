@@ -3,8 +3,8 @@ import { ComponentStory, ComponentMeta } from '@storybook/react';
 import Button from './Button';
 import { buttonColors, buttonVariants, buttonSizes } from './types';
 import { hideUnnecessaryControls } from '../../helpers/storybookHelper';
-import IconChevronLeft from '../../icons/IconChevronLeft';
-import IconChevronRight from '../../icons/IconChevronRight';
+import IconChevronLeft from '../SvgIcon/Icons/IconChevronLeft';
+import IconChevronRight from '../SvgIcon/Icons/IconChevronRight';
 
 export default {
   title: `Components/Button`,

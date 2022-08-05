@@ -1,6 +1,6 @@
 import React, { forwardRef, InputHTMLAttributes } from 'react';
 import styled from 'styled-components';
-import IconRadioChecked from '../../icons/IconRadioChecked';
+import IconRadioChecked from '../SvgIcon/Icons/IconRadioChecked';
 import { RadioColor, radioColors } from './types';
 
 const RadioInput = styled.input`

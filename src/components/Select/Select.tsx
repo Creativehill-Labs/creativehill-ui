@@ -10,7 +10,7 @@ import React, {
   useState,
 } from 'react';
 import styled from 'styled-components';
-import IconChevronDown from '../../icons/IconChevronDown';
+import IconChevronDown from '../SvgIcon/Icons/IconChevronDown';
 import Input from '../Input/Input';
 import Menu from '../Menu/Menu';
 import MenuItem from '../Menu/MenuItem';
