@@ -7,8 +7,7 @@ import {
   variant,
 } from 'styled-system';
 import { CuiTheme } from '../../utils/createCuiTheme';
-
-export type TextColor = keyof CuiTheme['palette']['semantic'];
+import { TextColor } from './types';
 
 export interface TextProps extends SpaceProps, TypographyProps {
   variant?: keyof CuiTheme['typography'];

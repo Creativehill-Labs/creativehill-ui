@@ -1,13 +1,14 @@
 import React, { FC, ReactElement, useMemo } from 'react';
 import styled from 'styled-components';
+import Box, { BoxProps } from '../Box/Box';
 
-interface FormControlProps {
+interface FormControlProps extends BoxProps {
   control: ReactElement;
   children?: ReactElement;
   errored?: boolean;
 }
 
-const FormControlContainer = styled.div`
+const FormControlContainer = styled(Box)`
   display: inline-flex;
   flex-direction: column;
   margin: 8px;
