@@ -50,7 +50,7 @@
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
   "files": [
-    "dist"
+    "dist/"
   ],
   "types": "dist/index.d.ts",
   "dependencies": {},
