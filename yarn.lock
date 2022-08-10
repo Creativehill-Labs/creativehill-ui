@@ -1383,8 +1383,8 @@
 
 "@creativehill-labs/eslint-config-creativehill@^0.1.1":
   version "0.1.1"
-  resolved "https://npm.pkg.github.com/download/@creativehill-labs/eslint-config-creativehill/0.1.1/eab1214da235dc53f6b56f3590d5497d267be347ed0015b22b171af332a57f57#f46c05e7bec2fe6bccb996881bbb82315ae24aa9"
-  integrity sha512-tT15UNB1z5+/uTqWtbYF0Ao0Ex/uMbtDzDO3n6dXB59FJHuvfPbVxIMW828l6c1M/RLW3U+NsoqdSR9fX7G8/g==
+  resolved "https://npm.pkg.github.com/download/@creativehill-labs/eslint-config-creativehill/0.1.1/a0956efb1b138834fd0d17a58500d2d5bcd4f9cd#a0956efb1b138834fd0d17a58500d2d5bcd4f9cd"
+  integrity sha512-s+G8bp8Fr5gOh6Vo4niUu1q2P7A4QSUtd9VGphqKY5BEA3lkJ5yMG7iadv/xFCJXRKXtpUa4vas8NhYR4lkNrw==
   dependencies:
     "@typescript-eslint/eslint-plugin" "^5.27.1"
     "@typescript-eslint/parser" "^5.27.1"
