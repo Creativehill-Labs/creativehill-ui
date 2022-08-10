@@ -16,6 +16,9 @@ module.exports = {
     "builder": "@storybook/builder-vite"
   },
   viteFinal: (config, { configType }) => {
+    if (configType === 'PRODUCTION') {
+      config.base = './';
+    }
     return mergeConfig(config, {
       define: {
         'process.env.FORCE_SIMILAR_INSTEAD_OF_MAP': false
